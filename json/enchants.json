@@ -1,0 +1,32 @@
+[
+    {
+        "enchant_id": "1",
+        "enchant_name": "Lucky",
+        "enchant_value_modifier": "2"
+    },
+    {
+        "enchant_id": "2",
+        "enchant_name": "Quick",
+        "enchant_value_modifier": "2"
+    },
+    {
+        "enchant_id": "3",
+        "enchant_name": "Powerful",
+        "enchant_value_modifier": "2"
+    },
+    {
+        "enchant_id": "4",
+        "enchant_name": "Shadowed",
+        "enchant_value_modifier": "2"
+    },
+    {
+        "enchant_id": "5",
+        "enchant_name": "Enchanted",
+        "enchant_value_modifier": "2"
+    },
+    {
+        "enchant_id": "6",
+        "enchant_name": "Fortuitous",
+        "enchant_value_modifier": "2"
+    }
+]

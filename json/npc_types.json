@@ -1,0 +1,22 @@
+[
+    {
+        "npc_clan_id": "",
+        "npc_type": "Adventurer",
+        "npc_type_id": "1"
+    },
+    {
+        "npc_clan_id": "",
+        "npc_type": "Courtier",
+        "npc_type_id": "2"
+    },
+    {
+        "npc_clan_id": "",
+        "npc_type": "Special",
+        "npc_type_id": "3"
+    },
+    {
+        "npc_clan_id": "",
+        "npc_type": "Enemy",
+        "npc_type_id": "4"
+    }
+]

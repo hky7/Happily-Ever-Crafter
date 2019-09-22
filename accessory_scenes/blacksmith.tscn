@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/table_small.png" type="Texture" id=1]
+[ext_resource path="res://scripts/object.gd" type="Script" id=2]
+[ext_resource path="res://scripts/accessory.gd" type="Script" id=3]
+
+[node name="blacksmith" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -59.8573, 44.893 )
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -29.7345, -87.8463, 16.5896, -115.308, 149.737, -38.1935, 150.292, -32.9231, 143.634, -29.317, 143.079, -4.0745, 92.317, 26.4384, -23.9093, -37.0839, -24.1867, -78.1376, -30.2893, -83.408 )
+
+[node name="polygon_cutout" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -59.8573, 44.893 )
+polygon = PoolVector2Array( -24.4641, -37.9161, 31.2913, -70.0933, 143.912, -5.46145, 92.317, 26.4384 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]

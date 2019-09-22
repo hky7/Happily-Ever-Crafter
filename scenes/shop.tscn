@@ -1,0 +1,668 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://scripts/nav_obstacles.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/wood_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scripts/floor_map.gd" type="Script" id=3]
+[ext_resource path="res://object_templates/merchant.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sprites/accessory_side_panel.png" type="Texture" id=5]
+[ext_resource path="res://scripts/camera_2d.gd" type="Script" id=6]
+[ext_resource path="res://assets/sprites/tailor_accessory_icon.png" type="Texture" id=7]
+[ext_resource path="res://scripts/merchant.gd" type="Script" id=8]
+[ext_resource path="res://assets/sprites/tailor_items_paper.png" type="Texture" id=9]
+[ext_resource path="res://fonts/Kingthings Petrock.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://fonts/Amaranth-Regular.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://scripts/resource_gui.gd" type="Script" id=12]
+[ext_resource path="res://assets/sprites/item_tray.png" type="Texture" id=13]
+[ext_resource path="res://scripts/load_shop.gd" type="Script" id=14]
+[ext_resource path="res://scripts/main_tray.gd" type="Script" id=15]
+[ext_resource path="res://scripts/modal.gd" type="Script" id=16]
+[ext_resource path="res://assets/sprites/shop_scroll.png" type="Texture" id=17]
+[ext_resource path="res://scripts/shop_accessories.gd" type="Script" id=18]
+[ext_resource path="res://scripts/save_game.gd" type="Script" id=19]
+[ext_resource path="res://assets/menu_opt_font.tres" type="DynamicFont" id=20]
+[ext_resource path="res://assets/sprites/blue_wide_btn.png" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/purple_btn.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/resource_panel.png" type="Texture" id=23]
+[ext_resource path="res://scripts/shop_info.gd" type="Script" id=24]
+[ext_resource path="res://assets/sprites/red_btn.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/cancel_texture.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/accessory_confirm_panel.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/buy_texture.png" type="Texture" id=28]
+
+
+
+
+
+
+
+
+
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -1913.58, 1105.72, 0.604492, -0.693596, 1918.98, 1116.28, -3.48041, 2214.82 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -1913.58, 1105.72, 0.604492, -0.693596, 1918.98, 1116.28, -3.48041, 2214.82 ) ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 64
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="DynamicFont" id=10]
+size = 56
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="DynamicFont" id=13]
+size = 26
+use_filter = true
+font_data = ExtResource( 10 )
+
+[node name="main_scene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 3, 3 )
+script = ExtResource( 6 )
+
+[node name="world" type="Navigation2D" parent="."]
+light_mask = 0
+position = Vector2( -6.10352e-05, -6.10352e-05 )
+script = ExtResource( 1 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="world"]
+position = Vector2( 0.00012207, 0 )
+z_index = 1
+navpoly = SubResource( 1 )
+
+[node name="floor" type="TileMap" parent="world"]
+mode = 2
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 238, 138 )
+cell_custom_transform = Transform2D( -119, 69, 119, 69, 0, 0 )
+cell_y_sort = true
+format = 1
+script = ExtResource( 3 )
+
+[node name="YSort" type="YSort" parent="."]
+position = Vector2( 6.10352e-05, 0 )
+
+[node name="merchant" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( -218.484, 293.711 )
+z_index = 3
+script = ExtResource( 8 )
+
+[node name="crafting_time_lbl" type="Label" parent="YSort"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 1063.66
+margin_top = 161.0
+margin_right = 1570.66
+margin_bottom = 322.0
+custom_fonts/font = SubResource( 2 )
+text = "Crafting Time Left:
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crafting_time" type="Label" parent="YSort"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 1063.66
+margin_top = 322.0
+margin_right = 1570.66
+margin_bottom = 483.0
+custom_fonts/font = SubResource( 2 )
+text = "0
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="accessory_window" type="CanvasLayer" parent="."]
+
+[node name="accessory_control" type="Control" parent="accessory_window"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="accessory_popup_panel" type="Panel" parent="accessory_window/accessory_control"]
+visible = false
+margin_left = -6.10352e-05
+margin_top = 251.231
+margin_right = 230.0
+margin_bottom = 769.231
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 18 )
+
+[node name="accessory_tray_texture" type="TextureRect" parent="accessory_window/accessory_control/accessory_popup_panel"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 226.0
+margin_bottom = 514.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tailor_btn" type="TextureButton" parent="accessory_window/accessory_control/accessory_popup_panel/accessory_tray_texture"]
+margin_left = 6.00006
+margin_top = 15.1626
+margin_right = 116.0
+margin_bottom = 109.163
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="shop_info_canvas" type="CanvasLayer" parent="."]
+
+[node name="shop_info_control" type="Control" parent="shop_info_canvas"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -923.0
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_info_texture" type="TextureRect" parent="shop_info_canvas/shop_info_control"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 800.0
+margin_bottom = 153.0
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="shop_info_name" type="Label" parent="shop_info_canvas/shop_info_control/shop_info_texture"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -127.0
+margin_right = 129.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 4 )
+text = "Shop Name"
+align = 1
+valign = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_info_exp" type="Label" parent="shop_info_canvas/shop_info_control/shop_info_texture"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -230.0
+margin_top = -160.0
+margin_right = -21.0
+margin_bottom = 1.0
+grow_horizontal = 0
+size_flags_horizontal = 2
+custom_fonts/font = SubResource( 5 )
+text = "1000"
+align = 2
+valign = 2
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_info_gold_amt" type="Label" parent="shop_info_canvas/shop_info_control/shop_info_texture"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 67.0
+margin_top = -160.0
+margin_right = 223.0
+margin_bottom = 1.0
+size_flags_horizontal = 2
+custom_fonts/font = SubResource( 6 )
+text = "50,000"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_inventory" type="CanvasLayer" parent="."]
+
+[node name="inventory_popup_panel" type="PopupPanel" parent="shop_inventory"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 590, 420 )
+rect_rotation = 0.621342
+custom_styles/panel = SubResource( 7 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="shop_inventory/inventory_popup_panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -960.0
+margin_right = 960.0
+margin_bottom = 1080.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="item_list" type="Panel" parent="shop_inventory/inventory_popup_panel/TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -790.0
+margin_top = 316.0
+margin_right = 813.0
+margin_bottom = 854.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="item_scroll_container" type="ScrollContainer" parent="shop_inventory/inventory_popup_panel/TextureRect/item_list"]
+anchor_left = 0.0250778
+anchor_top = -0.000300727
+anchor_right = 1.02508
+anchor_bottom = 0.999699
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="item_list_grid" type="GridContainer" parent="shop_inventory/inventory_popup_panel/TextureRect/item_list/item_scroll_container"]
+margin_right = 550.0
+margin_bottom = 274.0
+rect_min_size = Vector2( 550, 274 )
+columns = 7
+
+[node name="crafting_panel" type="CanvasLayer" parent="."]
+
+[node name="shop_popup_panel" type="PopupPanel" parent="crafting_panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -955.0
+margin_top = -387.0
+margin_right = 965.0
+margin_bottom = 365.0
+rect_min_size = Vector2( 590, 420 )
+rect_rotation = 0.621342
+custom_styles/panel = SubResource( 7 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="crafting_panel/shop_popup_panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -455.5
+margin_right = 960.0
+margin_bottom = 455.5
+texture = ExtResource( 9 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="item_list" type="Panel" parent="crafting_panel/shop_popup_panel/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -801.0
+margin_top = -325.5
+margin_right = 802.0
+margin_bottom = 268.5
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="item_scroll_container" type="ScrollContainer" parent="crafting_panel/shop_popup_panel/TextureRect/item_list"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="item_list_grid" type="GridContainer" parent="crafting_panel/shop_popup_panel/TextureRect/item_list/item_scroll_container"]
+margin_right = 550.0
+margin_bottom = 274.0
+rect_min_size = Vector2( 550, 274 )
+custom_constants/vseparation = 0
+custom_constants/hseparation = 25
+columns = 11
+
+[node name="close_btn" type="TextureButton" parent="crafting_panel/shop_popup_panel/TextureRect"]
+anchor_left = 0.826453
+anchor_top = 1.02287
+anchor_right = 0.826453
+anchor_bottom = 1.02287
+margin_left = 96.7355
+margin_top = -247.048
+margin_right = 182.735
+margin_bottom = -206.048
+texture_normal = ExtResource( 25 )
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="crafting_panel/shop_popup_panel/TextureRect/close_btn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -2.0
+custom_fonts/font = ExtResource( 20 )
+text = "Close"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_accessories_canvas" type="CanvasLayer" parent="."]
+
+[node name="accessories_popup" type="PopupPanel" parent="shop_accessories_canvas"]
+margin_left = 184.0
+margin_top = 157.0
+margin_right = 375.0
+margin_bottom = 314.0
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="shop_accessories_canvas/accessories_popup"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 187.0
+margin_bottom = 153.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.52549, 0.733333, 0.741176, 1 )
+
+[node name="GridContainer" type="GridContainer" parent="shop_accessories_canvas/accessories_popup"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -91.5
+margin_top = 4.0
+margin_right = 91.5
+margin_bottom = 153.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="blacksmith_button" type="Button" parent="shop_accessories_canvas/accessories_popup/GridContainer"]
+margin_right = 121.0
+margin_bottom = 20.0
+text = "Blacksmith Table"
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="tailor_button" type="Button" parent="shop_accessories_canvas/accessories_popup/GridContainer"]
+margin_top = 29.0
+margin_right = 85.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Tailor Table"
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_icon_canvas" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="shop_icon_canvas"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -118.0
+margin_top = -96.7744
+margin_bottom = -10.7744
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_button" type="TextureButton" parent="shop_icon_canvas/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -43.0
+margin_right = 43.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 21 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="shop_btn" type="Label" parent="shop_icon_canvas/Control/shop_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 20 )
+text = "Shop"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="save_button" type="TextureButton" parent="shop_icon_canvas/Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -41.5
+margin_top = -39.0
+margin_right = 41.5
+texture_normal = ExtResource( 22 )
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_btn" type="Label" parent="shop_icon_canvas/Control/save_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 20 )
+text = "Save"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_tray" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="shop_tray"]
+anchor_top = -0.0203704
+anchor_right = 0.875521
+anchor_bottom = 1.0
+margin_top = 903.0
+margin_right = 121.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tray" type="TextureRect" parent="shop_tray/Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -514.5
+margin_top = -120.0
+margin_right = 514.5
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="accessory_btn" type="Button" parent="shop_tray/Control/tray"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 58.0172
+margin_top = -36.7744
+margin_right = 133.017
+margin_bottom = 26.2256
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.141176, 0.45098, 0.509804, 1 )
+text = "Acc"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="resource_panel_texture" type="TextureRect" parent="shop_tray/Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -224.0
+margin_right = 284.0
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="resource_panel" type="Panel" parent="shop_tray/Control/resource_panel_texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 11 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resource_grid" type="GridContainer" parent="shop_tray/Control/resource_panel_texture/resource_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_bottom = -12.0
+rect_min_size = Vector2( 152, 178 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/hseparation = 0
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="accessory_confirmation" type="CanvasLayer" parent="."]
+
+[node name="confirmation_control" type="Control" parent="accessory_confirmation"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="confirmation_popup" type="Panel" parent="accessory_confirmation/confirmation_control"]
+visible = false
+margin_left = 892.29
+margin_top = 817.075
+margin_right = 1039.29
+margin_bottom = 941.075
+custom_styles/panel = SubResource( 12 )
+
+[node name="confirmation_texture" type="TextureRect" parent="accessory_confirmation/confirmation_control/confirmation_popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -69.5
+margin_top = -58.0
+margin_right = 69.5
+margin_bottom = 58.0
+texture = ExtResource( 27 )
+
+[node name="confirm_lbl" type="Label" parent="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -43.5
+margin_right = 43.5
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 13 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 0
+text = "Confirm?"
+
+[node name="buy_btn" type="TextureButton" parent="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture"]
+margin_left = 7.79047
+margin_top = 46.4583
+margin_right = 68.7905
+margin_bottom = 101.458
+texture_normal = ExtResource( 28 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="cancel_btn" type="TextureButton" parent="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture"]
+margin_left = 74.0441
+margin_top = 45.9053
+margin_right = 136.044
+margin_bottom = 101.905
+texture_normal = ExtResource( 26 )
+script = ExtResource( 18 )
+[connection signal="pressed" from="accessory_window/accessory_control/accessory_popup_panel/accessory_tray_texture/tailor_btn" to="accessory_window/accessory_control/accessory_popup_panel" method="_on_tailor_btn_pressed"]
+[connection signal="about_to_show" from="shop_inventory/inventory_popup_panel" to="shop_inventory/inventory_popup_panel" method="_on_PopupPanel_about_to_show"]
+[connection signal="about_to_show" from="crafting_panel/shop_popup_panel" to="crafting_panel/shop_popup_panel" method="_on_PopupPanel_about_to_show"]
+[connection signal="pressed" from="crafting_panel/shop_popup_panel/TextureRect/close_btn" to="crafting_panel/shop_popup_panel/TextureRect/close_btn" method="_on_close_btn_pressed"]
+[connection signal="about_to_show" from="shop_accessories_canvas/accessories_popup" to="shop_accessories_canvas/accessories_popup" method="_on_accessories_popup_about_to_show"]
+[connection signal="pressed" from="shop_icon_canvas/Control/save_button" to="shop_icon_canvas/Control/save_button" method="_on_save_button_pressed"]
+[connection signal="pressed" from="shop_tray/Control/tray/accessory_btn" to="accessory_window/accessory_control/accessory_popup_panel" method="_on_accessory_btn_pressed"]
+[connection signal="accessory_buy_success" from="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture/buy_btn" to="world" method="_on_buy_btn_accessory_buy_success"]
+[connection signal="pressed" from="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture/buy_btn" to="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture/buy_btn" method="_on_buy_btn_pressed"]
+[connection signal="pressed" from="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture/cancel_btn" to="accessory_confirmation/confirmation_control/confirmation_popup/confirmation_texture/cancel_btn" method="_on_cancel_btn_pressed"]

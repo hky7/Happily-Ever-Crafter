@@ -1,0 +1,98 @@
+[
+    {
+        "resource_id": "5",
+        "resource_name": "Wool"
+    },
+    {
+        "resource_id": "6",
+        "resource_name": "Linen"
+    },
+    {
+        "resource_id": "7",
+        "resource_name": "Silk"
+    },
+    {
+        "resource_id": "8",
+        "resource_name": "Spider Silk"
+    },
+    {
+        "resource_id": "9",
+        "resource_name": "Iron"
+    },
+    {
+        "resource_id": "10",
+        "resource_name": "Steel"
+    },
+    {
+        "resource_id": "11",
+        "resource_name": "Damascus Steel"
+    },
+    {
+        "resource_id": "12",
+        "resource_name": "Mithril"
+    },
+    {
+        "resource_id": "13",
+        "resource_name": "Herbs"
+    },
+    {
+        "resource_id": "14",
+        "resource_name": "Arcanum"
+    },
+    {
+        "resource_id": "15",
+        "resource_name": "Aqua Vitae"
+    },
+    {
+        "resource_id": "16",
+        "resource_name": "Alkahest"
+    },
+    {
+        "resource_id": "17",
+        "resource_name": "Silver"
+    },
+    {
+        "resource_id": "18",
+        "resource_name": "Gold"
+    },
+    {
+        "resource_id": "19",
+        "resource_name": "Crystal"
+    },
+    {
+        "resource_id": "20",
+        "resource_name": "Gem"
+    },
+    {
+        "resource_id": "21",
+        "resource_name": "Light Hide"
+    },
+    {
+        "resource_id": "22",
+        "resource_name": "Medium Hide"
+    },
+    {
+        "resource_id": "23",
+        "resource_name": "Heavy Hide"
+    },
+    {
+        "resource_id": "24",
+        "resource_name": "Dragon Hide"
+    },
+    {
+        "resource_id": "25",
+        "resource_name": "Water"
+    },
+    {
+        "resource_id": "26",
+        "resource_name": "Honey"
+    },
+    {
+        "resource_id": "27",
+        "resource_name": "Olive Oil"
+    },
+    {
+        "resource_id": "28",
+        "resource_name": "Exotic Spices"
+    }
+]

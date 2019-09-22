@@ -1,0 +1,26 @@
+[
+    {
+        "item_type": "resource",
+        "item_type_id": "1"
+    },
+    {
+        "item_type": "weapon",
+        "item_type_id": "2"
+    },
+    {
+        "item_type": "consumable",
+        "item_type_id": "3"
+    },
+    {
+        "item_type": "armor",
+        "item_type_id": "4"
+    },
+    {
+        "item_type": "container",
+        "item_type_id": "5"
+    },
+    {
+        "item_type": "crafting",
+        "item_type_id": "6"
+    }
+]

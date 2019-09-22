@@ -1,0 +1,62 @@
+[
+    {
+        "max_resource_quantity": 20,
+        "shop_level": 1,
+        "shop_level_id": 1,
+        "size": 16
+    },
+    {
+        "max_resource_quantity": 30,
+        "shop_level": 25,
+        "shop_level_id": 2,
+        "size": 18
+    },
+    {
+        "max_resource_quantity": 40,
+        "shop_level": 50,
+        "shop_level_id": 3,
+        "size": 20
+    },
+    {
+        "max_resource_quantity": 50,
+        "shop_level": 75,
+        "shop_level_id": 4,
+        "size": 22
+    },
+    {
+        "max_resource_quantity": 60,
+        "shop_level": 100,
+        "shop_level_id": 5,
+        "size": 24
+    },
+    {
+        "max_resource_quantity": 80,
+        "shop_level": 200,
+        "shop_level_id": 6,
+        "size": 26
+    },
+    {
+        "max_resource_quantity": 100,
+        "shop_level": 300,
+        "shop_level_id": 7,
+        "size": 28
+    },
+    {
+        "max_resource_quantity": 120,
+        "shop_level": 400,
+        "shop_level_id": 8,
+        "size": 30
+    },
+    {
+        "max_resource_quantity": 140,
+        "shop_level": 500,
+        "shop_level_id": 9,
+        "size": 32
+    },
+    {
+        "max_resource_quantity": 150,
+        "shop_level": 600,
+        "shop_level_id": 10,
+        "size": 34
+    }
+]

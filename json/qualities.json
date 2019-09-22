@@ -1,0 +1,37 @@
+[
+    {
+        "qualitiy_id": "1",
+        "quality": "Poor",
+        "quality_value_modifier": "0.75"
+    },
+    {
+        "qualitiy_id": "2",
+        "quality": "Normal",
+        "quality_value_modifier": "0"
+    },
+    {
+        "qualitiy_id": "3",
+        "quality": "Good",
+        "quality_value_modifier": "1.25"
+    },
+    {
+        "qualitiy_id": "4",
+        "quality": "Superior",
+        "quality_value_modifier": "1.5"
+    },
+    {
+        "qualitiy_id": "5",
+        "quality": "Fabled",
+        "quality_value_modifier": "2"
+    },
+    {
+        "qualitiy_id": "6",
+        "quality": "Legendary",
+        "quality_value_modifier": "4"
+    },
+    {
+        "qualitiy_id": "7",
+        "quality": "Mythical",
+        "quality_value_modifier": "8"
+    }
+]

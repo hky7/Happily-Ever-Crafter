@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/tilesD.gd" type="Script" id=1]
+
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -67.1044, -0.862457, -1.12897, -35.0719, 66.4755, -0.0479431, 2.12903, 31.718 )
+[connection signal="mouse_entered" from="." to="." method="_on_Area2D_mouse_entered"]

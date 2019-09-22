@@ -1,0 +1,277 @@
+[
+    {
+        "recipe_id": "1",
+        "recipe_name": "Resource",
+        "recipe_time_to_complete": "0"
+    },
+    {
+        "recipe_id": "2",
+        "recipe_name": "Robe",
+        "recipe_time_to_complete": "60"
+    },
+    {
+        "recipe_id": "3",
+        "recipe_name": "Hat",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "4",
+        "recipe_name": "Gloves",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "6",
+        "recipe_name": "Shoes",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "7",
+        "recipe_name": "Leggings",
+        "recipe_time_to_complete": "45"
+    },
+    {
+        "recipe_id": "8",
+        "recipe_name": "Tunic",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "9",
+        "recipe_name": "Cloak",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "10",
+        "recipe_name": "Bracers",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "11",
+        "recipe_name": "Belt",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "12",
+        "recipe_name": "Short Sword",
+        "recipe_time_to_complete": "45"
+    },
+    {
+        "recipe_id": "13",
+        "recipe_name": "Long Sword",
+        "recipe_time_to_complete": "60"
+    },
+    {
+        "recipe_id": "14",
+        "recipe_name": "Breastplate",
+        "recipe_time_to_complete": "45"
+    },
+    {
+        "recipe_id": "15",
+        "recipe_name": "Greaves",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "16",
+        "recipe_name": "Vambrace",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "17",
+        "recipe_name": "Pauldrons",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "18",
+        "recipe_name": "Gauntlets",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "19",
+        "recipe_name": "Helm",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "20",
+        "recipe_name": "Shield",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "21",
+        "recipe_name": "Health Potion",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "22",
+        "recipe_name": "Mana Potion",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "23",
+        "recipe_name": "Cure Potion",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "24",
+        "recipe_name": "Rebirth Potion",
+        "recipe_time_to_complete": "60"
+    },
+    {
+        "recipe_id": "25",
+        "recipe_name": "Posion Vial",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "26",
+        "recipe_name": "Empowerment Potion",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "27",
+        "recipe_name": "Sleep Vial",
+        "recipe_time_to_complete": "45"
+    },
+    {
+        "recipe_id": "28",
+        "recipe_name": "Stone Vial",
+        "recipe_time_to_complete": "45"
+    },
+    {
+        "recipe_id": "29",
+        "recipe_name": "Antidote Potion",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "30",
+        "recipe_name": "Bangle",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "31",
+        "recipe_name": "Amulet",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "32",
+        "recipe_name": "Earrings",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "33",
+        "recipe_name": "Anklet",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "34",
+        "recipe_name": "Circlet",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "35",
+        "recipe_name": "Trinket",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "36",
+        "recipe_name": "Brooch",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "37",
+        "recipe_name": "Armlet",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "38",
+        "recipe_name": "Ring",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "41",
+        "recipe_name": "Saddle",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "42",
+        "recipe_name": "Swordbelt",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "43",
+        "recipe_name": "Leather Breastplate",
+        "recipe_time_to_complete": "60"
+    },
+    {
+        "recipe_id": "44",
+        "recipe_name": "Gauntlets",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "45",
+        "recipe_name": "Harness",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "46",
+        "recipe_name": "Headband",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "47",
+        "recipe_name": "Sabatons",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "48",
+        "recipe_name": "Gorget",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "49",
+        "recipe_name": "Pouch",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "50",
+        "recipe_name": "Stew",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "51",
+        "recipe_name": "Salted Meat",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "52",
+        "recipe_name": "Spirits",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "53",
+        "recipe_name": "Bread",
+        "recipe_time_to_complete": "20"
+    },
+    {
+        "recipe_id": "54",
+        "recipe_name": "Wine",
+        "recipe_time_to_complete": "25"
+    },
+    {
+        "recipe_id": "55",
+        "recipe_name": "Mead",
+        "recipe_time_to_complete": "30"
+    },
+    {
+        "recipe_id": "56",
+        "recipe_name": "Cheese",
+        "recipe_time_to_complete": "35"
+    },
+    {
+        "recipe_id": "57",
+        "recipe_name": "Sweet Cake",
+        "recipe_time_to_complete": "45"
+    },
+    {
+        "recipe_id": "58",
+        "recipe_name": "Salted Fish",
+        "recipe_time_to_complete": "25"
+    }
+]

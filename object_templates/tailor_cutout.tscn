@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Polygon2D" type="Polygon2D"]
+z_index = 2
+color = Color( 0.453125, 0.0159302, 0.108151, 1 )
+polygon = PoolVector2Array( -142, -74, -49, -116, 116, -26, 116, 82, 49, 123, -135, 24 )
+[connection signal="draw" from="." to="." method="_on_Polygon2D_draw"]

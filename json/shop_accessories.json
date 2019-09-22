@@ -1,0 +1,128 @@
+[
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 1,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Tailor",
+        "shop_accessory_type_id": 1
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 2,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Blacksmith",
+        "shop_accessory_type_id": 2
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 3,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Alchemist Lab",
+        "shop_accessory_type_id": 3
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 4,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Jeweler Table",
+        "shop_accessory_type_id": 4
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 5,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Leatherworker Bench",
+        "shop_accessory_type_id": 5
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 6,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Cooking Station",
+        "shop_accessory_type_id": 6
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 7,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Dye Pot",
+        "shop_accessory_type_id": 1
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 8,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Smelter",
+        "shop_accessory_type_id": 2
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 9,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Distillery",
+        "shop_accessory_type_id": 3
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 10,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Whet Stone",
+        "shop_accessory_type_id": 4
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 11,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Tannery",
+        "shop_accessory_type_id": 5
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 12,
+        "shop_accessory_level": 1,
+        "shop_accessory_name": "Prep Board",
+        "shop_accessory_type_id": 6
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 13,
+        "shop_accessory_level": 5,
+        "shop_accessory_name": "Fabric Shelf",
+        "shop_accessory_type_id": 1
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 14,
+        "shop_accessory_level": 5,
+        "shop_accessory_name": "Sword Stand",
+        "shop_accessory_type_id": 2
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 15,
+        "shop_accessory_level": 5,
+        "shop_accessory_name": "Potion Shelf",
+        "shop_accessory_type_id": 3
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 16,
+        "shop_accessory_level": 5,
+        "shop_accessory_name": "Display Case",
+        "shop_accessory_type_id": 4
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 17,
+        "shop_accessory_level": 5,
+        "shop_accessory_name": "Armor Stand",
+        "shop_accessory_type_id": 5
+    },
+    {
+        "shop_accessory_cost": 100,
+        "shop_accessory_id": 18,
+        "shop_accessory_level": 5,
+        "shop_accessory_name": "Iron Pot",
+        "shop_accessory_type_id": 6
+    }
+]

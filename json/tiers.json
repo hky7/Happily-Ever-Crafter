@@ -1,0 +1,22 @@
+[
+    {
+        "tier": "common",
+        "tier_id": "1"
+    },
+    {
+        "tier": "uncommon",
+        "tier_id": "2"
+    },
+    {
+        "tier": "rare",
+        "tier_id": "3"
+    },
+    {
+        "tier": "ultra",
+        "tier_id": "4"
+    },
+    {
+        "tier": "legendary",
+        "tier_id": "5"
+    }
+]

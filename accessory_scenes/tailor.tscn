@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/sprites/tailor_table_2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/object.gd" type="Script" id=2]
+[ext_resource path="res://scripts/accessory.gd" type="Script" id=3]
+[ext_resource path="res://assets/sprites/tile_highlight.png" type="Texture" id=4]
+
+[node name="tailor" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -59.8573, 44.893 )
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PoolVector2Array( -125.156, -110.267, 1.77658, -182.116, 246.062, -39.0173, 244.864, -20.4564, 238.877, 3.49314, 222.112, 57.9783, 210.137, 68.1568, 121.524, 121.445, 73.6252, 91.5076, -55.1036, 28.6401, -110.187, -10.2778, -117.372, -73.1454, -125.755, -96.4962 )
+
+[node name="click_area" type="Area2D" parent="."]
+position = Vector2( -59.8573, 44.893 )
+z_index = 3
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="click_area"]
+visible = false
+polygon = PoolVector2Array( -118.57, -103.082, -2.41461, -172.536, 234.087, -33.0299, 119.728, 35.2263, -35.9439, -53.9857 )
+
+[node name="polygon_cutout" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -59.8573, 44.893 )
+polygon = PoolVector2Array( -101.206, -14.469, -119.767, -103.082, 0.579102, -173.733, 239.476, -35.4249, 216.125, 54.3859, 117.932, 115.457, 58.6567, 99.89, 59.9764, 50.9666, -19.997, 6.65696, -55.1036, 21.4553 )
+
+[node name="front_ray" type="RayCast2D" parent="."]
+position = Vector2( -10.7439, 91.1725 )
+enabled = true
+collide_with_areas = true
+
+[node name="back_ray" type="RayCast2D" parent="."]
+position = Vector2( -132.752, 25.386 )
+enabled = true
+collide_with_areas = true
+
+[node name="back_highlight" type="Sprite" parent="."]
+visible = false
+position = Vector2( -58.9813, 35.6178 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="front_highlight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 60.2267, 104.881 )
+z_index = -1
+texture = ExtResource( 4 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="click_area" to="click_area" method="_on_Area2D_body_entered"]
+[connection signal="input_event" from="click_area" to="click_area" method="_on_click_area_input_event"]
